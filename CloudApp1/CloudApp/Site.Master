@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CloudApp.SiteMaster" %>
+
+<%@ Register Assembly="Infragistics4.Web.v15.1, Version=15.1.20151.1018, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" Namespace="Infragistics.Web.UI.NavigationControls" TagPrefix="ig" %>
+
+<%@ Register Assembly="Infragistics4.Web.v15.1, Version=15.1.20151.1018, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" Namespace="Infragistics.Web.UI.ListControls" TagPrefix="ig" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 246px;
+        }
+
+        .newStyle1 {
+            font-size: medium;
+            font-weight: bolder;
+            font-family: verdana, Geneva, Tahoma, sans-serif;
+            background-color: #042151;
+            color: #6ab8ff;
+        }
+
+        .page {
+            background-color: black;
+            color: #FFFFFF;
+            margin-top: 0;
+        }
+        .sectionBlue {
+            background-color: darkblue;
+            color: lightblue;
+        }
+        .auto-style2 {
+            height: 19px;
+        }
+    </style>
+
+</head>
+<body style="page">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <table width="100%">
+            <tr style="margin: 0px; padding: 0px">
+                <td colspan="2"> <ig:WebDataMenu ID="WebDataMenu1" runat="server" OnItemClick="WebDataMenu1_ItemClick" Width="100%">
+                        <GroupSettings Orientation="Horizontal" EnableAnimation="true"
+                            AnimationType="OpacityAnimation" AnimationDuration="500" Width="100%" />
+                        <Items>
+                            <ig:DataMenuItem Text="Project">
+                            </ig:DataMenuItem>
+                            <ig:DataMenuItem Text="Services">
+                            </ig:DataMenuItem>
+                            <ig:DataMenuItem Text="Communication">
+                                <Items>
+                                    <ig:DataMenuItem Text="Upload/Download">
+                                    </ig:DataMenuItem>
+                                </Items>
+                            </ig:DataMenuItem>
+                            <ig:DataMenuItem Text="Tools">
+                            </ig:DataMenuItem>
+                            <ig:DataMenuItem Text="Wizards">
+                            </ig:DataMenuItem>
+                            <ig:DataMenuItem Text="Help">
+                            </ig:DataMenuItem>
+                        </Items>
+                    </ig:WebDataMenu> </td>
+                <td>
+                   
+                </td>
+            </tr>
+            <tr style="background: #17243a">
+                <td class="auto-style1" valign="top">
+                    <table width="100%">
+                        <tr class="newStyle1">
+                            <td valign="top" class="auto-style2">Project : AlphaPhase
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" style="background:White">
+                                <ig:WebExplorerBar ID="WebExplorerBar1" runat="server" GroupContentsHeight="" Height="100%" Width="250px">
+                                    <Groups>
+                                        <ig:ExplorerBarGroup GroupContentsHeight="" Text="Node 1" Selected="True" Expanded="true" >
+                                            <Items>
+                                                <ig:ExplorerBarItem Text="Upload/Download">
+                                                </ig:ExplorerBarItem>
+                                                <ig:ExplorerBarItem Text="General Settings">
+                                                </ig:ExplorerBarItem>
+                                                <ig:ExplorerBarItem Text="DACT Settings">
+                                                </ig:ExplorerBarItem>
+                                                <ig:ExplorerBarItem Text="NAC Settings">
+                                                </ig:ExplorerBarItem>
+                                                <ig:ExplorerBarItem Text="Device Configuration">
+                                                </ig:ExplorerBarItem>
+                                            </Items>
+                                        </ig:ExplorerBarGroup>
+                                        <ig:ExplorerBarGroup GroupContentsHeight="" Text="Node 2">
+                                        </ig:ExplorerBarGroup>
+                                        <ig:ExplorerBarGroup GroupContentsHeight="" Text="Node 3">
+                                        </ig:ExplorerBarGroup>
+                                    </Groups>
+                                </ig:WebExplorerBar>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td align="left" valign="top">
+                    <table width="100%">
+                        <tr class="newStyle1">
+                            <td valign="top">Download Service
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div align="left">
+                                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                    <hr />
+                                    <footer>
+                                        <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                                    </footer>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+﻿
+.ControlPanelHeader {
+    height: 30px;
+    color: #FF6600;
+    font-size: 9pt;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #F7F7F7;
+    border: 1px solid #EEEEEE;
+    border-bottom: 0px;
+    overflow: visible;
+}
+
+    .ControlPanelHeader img {
+        vertical-align: top;
+        margin-top: -20px;
+        height: 58px;
+        z-index: 1000;
+        position: relative;
+    }
+
+.controlPanel {
+    background-color: #F7F7F7;
+    border: 1px solid #EEEEEE;
+    border-top: 0px;
+    padding: 10px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+    line-height: 18px;
+}
+
+.OptionPanel {
+    background-color: #F7F7F7;
+    border: 1px solid #EEEEEE;
+    padding: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+
+.controlPanelEvent {
+    height: 110px;
+    overflow: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #CECECE;
+    font-weight: Normal;
+    padding: 10px;
+    color: #666666;
+}
+
+.controlPanelEventServer {
+    height: 30px;
+    overflow: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #CECECE;
+    font-weight: bold;
+    padding: 10px;
+    color: #666666;
+}
+
+.NormalTemplate {
+    color: #666666;
+}
+
+.AlternateTemplate {
+    color: #00BFFF;
+}
+
+.igg_CustomLook {
+    font-size: 12px;
+}
+
+.igg_CustomHeader {
+    background-color: Orange;
+    font-size: 14px;
+}
+
+.outputValue {
+    font-weight: normal;
+    color: #333333;
+}
+
+.leftTitle {
+    position: relative;
+    width: 150px;
+    float: left;
+    font-weight: normal;
+}
+
+.CSSform {
+    font-size: 11px;
+    height: 20px;
+}
